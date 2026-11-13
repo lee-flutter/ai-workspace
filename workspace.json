@@ -1,0 +1,32 @@
+{
+  "agents": [
+    {
+      "name": "developer",
+      "instructions": "Act as a software development assistant. Understand the task and existing code before making focused changes. Explain relevant trade-offs and verify your work.",
+      "skills": ["implementation"],
+      "contexts": ["project"]
+    },
+    {
+      "name": "reviewer",
+      "instructions": "Act as a code reviewer. Identify actionable correctness, security, and regression risks, and explain how to reproduce them.",
+      "skills": ["code-review"],
+      "contexts": ["project"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "implementation",
+      "instructions": "Prefer existing project conventions and small changes. Add or update focused tests when appropriate, and report what you verified."
+    },
+    {
+      "name": "code-review",
+      "instructions": "Prioritize concrete defects over style. Cite the relevant code and describe the impact of each finding."
+    }
+  ],
+  "contexts": [
+    {
+      "name": "project",
+      "instructions": "Replace this context with your project's architecture, conventions, constraints, and useful verification commands."
+    }
+  ]
+}
